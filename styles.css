@@ -1,6 +1,6 @@
 :root {
-  --bg-1: #0d1117;
-  --bg-2: #121a22;
+  --bg-1: #111923;
+  --bg-2: #18232d;
   --panel: #101820;
   --panel-alt: #151f2a;
   --chat: #0c141b;
@@ -94,7 +94,7 @@ body {
 }
 
 .chat-thread {
-  background: linear-gradient(180deg, #0d141b, #0b1218);
+  background: #000000;
   padding: 28px 22px 30px;
 }
 
@@ -103,6 +103,10 @@ body {
   gap: 14px;
   align-items: flex-start;
   margin-bottom: 18px;
+}
+
+.message.incoming {
+  justify-content: center;
 }
 
 .message.outgoing {
@@ -123,7 +127,8 @@ body {
 }
 
 .message-content {
-  max-width: 92%;
+  width: 100%;
+  max-width: 100%;
 }
 
 .name-row {
@@ -152,7 +157,7 @@ body {
   position: relative;
   height: 220px;
   overflow: hidden;
-  background: linear-gradient(135deg, #111d29, #0e171f);
+  background: #0e171f url("Tech%20campaign%20image.png") center / cover no-repeat;
 }
 
 .campaign-hero::before {
@@ -257,6 +262,14 @@ body {
   color: var(--muted);
 }
 
+.campaign-body p:first-of-type strong {
+  color: #ffffff;
+}
+
+.campaign-body p + p {
+  margin-top: 22px;
+}
+
 .tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -325,6 +338,39 @@ button:hover {
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
   color: #07110d;
   box-shadow: 0 12px 20px rgba(0, 223, 117, 0.22);
+}
+
+.survey-cta {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.survey-cta .primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.survey-cta .primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 15px 26px rgba(0, 223, 117, 0.3);
+}
+
+.campaign-body p.survey-closing {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.campaign-body p.survey-closing strong {
+  color: var(--accent);
 }
 
 .secondary {
